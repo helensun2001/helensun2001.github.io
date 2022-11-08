@@ -4,6 +4,97 @@
   
   
   <entry>
+    <title>数据科学从零到一</title>
+    <link href="/2022/11/08/datascience%20from%200%20to%201/"/>
+    <url>/2022/11/08/datascience%20from%200%20to%201/</url>
+    
+    <content type="html"><![CDATA[<p>统计&#x2F;数学&#x2F;杂乱无章</p><span id="more"></span><h2 id="Statistics-x2F-Theories"><a href="#Statistics-x2F-Theories" class="headerlink" title="Statistics&#x2F;Theories"></a>Statistics&#x2F;Theories</h2><p><a href="https://zhuanlan.zhihu.com/p/26614750">极大似然估计</a>：</p><p>对于这个函数：输入有两个：x表示某一个具体的数据；alpha表示模型的参数</p><p>如果alpha是已知确定的,x是变量，这个函数叫做概率函数(probability function)，它描述对于不同的样本点  ，其出现概率是多少。<br>如果x是已知确定的，alpha是变量，这个函数叫做似然函数(likelihood function), 它描述对于不同的模型参数，出现  这个样本点的概率是多少。</p><h3 id="R"><a href="#R" class="headerlink" title="R"></a>R</h3><p>解读logistic回归<br>保持其他变量不变时，β1的值表示X1值每增加一个单位时Y的变化量；而在逻辑回归模型中，结合之前所提到的发生比，X1每增加一个单位，对数发生比（log odds）的变化为β1。</p><p><a href="https://www.yiibai.com/r/r_boxplots.html">R语言教程</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Tech-study</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>bloomberg index</title>
+    <link href="/2022/10/14/bloombergindex/"/>
+    <url>/2022/10/14/bloombergindex/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Bloomberg-automation-彭博公司信息构成"><a href="#Bloomberg-automation-彭博公司信息构成" class="headerlink" title="Bloomberg automation 彭博公司信息构成"></a>Bloomberg automation 彭博公司信息构成</h2><p>Overview: what does the company sell?<br>Operations: the sales split by businesses, products split and revenues source<br>Geographic Reach: headquarter, offices and customers location; production and selling location<br>Sales &amp; marketing: market split<br>Financial performance<br>Strategy<br>Background and history</p><p>BICS 行业分类，行业内的排名以及涉及行业的split</p><p>SPLC 供应链数据缺失怎么办？</p><p>零售和批发vs消费品门类的差别？</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>R-learning notebook</title>
+    <link href="/2022/10/11/R%20self-learning%20notebook/"/>
+    <url>/2022/10/11/R%20self-learning%20notebook/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h3 id="描述多维数据，探索相关性"><a href="#描述多维数据，探索相关性" class="headerlink" title="描述多维数据，探索相关性"></a>描述多维数据，探索相关性</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">attach</span><span class="hljs-params">(evdata)</span></span><br><span class="hljs-function"><span class="hljs-title">par</span><span class="hljs-params">(mex=<span class="hljs-number">0.5</span>)</span></span><br><span class="hljs-function"><span class="hljs-title">pairs</span><span class="hljs-params">(evdata,gap=<span class="hljs-number">0</span>,cex.labels=<span class="hljs-number">0.8</span>)</span></span><br></code></pre></td></tr></table></figure><p>对于数值型变量采用</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">cor</span><span class="hljs-params">(abc)</span></span><br></code></pre></td></tr></table></figure><h3 id="多元线性回归"><a href="#多元线性回归" class="headerlink" title="多元线性回归"></a>多元线性回归</h3><p>有限采用最小二乘估计：</p><p>maxLike包的maxLike函数最大似然估计</p><p>模型检验与评价：显著性检验<br>t值：不是每个都显著，是否剔除变量<br>F值：联合检验是否显著，是否更该模型<br>anova函数得到方差表：从上向下进行，逐个剔除模型</p><p>R语言对大规模数据进行描述性分析与绘图<br>探索流程.batch2为原数据.sample1为小样本</p><p>Step1：读取数据到数据集<br>batch2 &lt;- read.csv(“&#x2F;home&#x2F;mw&#x2F;input&#x2F;data5003&#x2F;batch2_jobID_00B80TR.csv”)</p><p>原数据集中取前十行作为小样本，试运行debug语法<br>观察小样本，确定数据集包含变量的类型与统计口径<br>sample1 &lt;- batch2[c(1:10),]<br>sample1 </p><p>对原数据集各变量的分布进行观察。输出每个变量的四分位数。<br>summary(batch2)</p><p>根据summary的四分位数情况，对工作年限和距离城市的公里数两个定距变量进行简单分组。<br>分组后可以采用定类X定距的箱型图观察各组的分布情况<br>由于变量数较少采用batch2[第几列]引用条件<br>[]方括号内写筛选条件，赋值需要用双引号括起标签<br>batch2$experience_cate[batch2[7]&lt;&#x3D; 6] &lt;- “short”<br>batch2$experience_cate[batch2[7]&gt; 6 &amp; batch2[6]&lt;&#x3D;12 ] &lt;- “mid”<br>batch2$experience_cate[batch2[7]&gt; 12 &amp; batch2[6]&lt;&#x3D;18 ] &lt;- “long”<br>batch2$experience_cate[batch2[7]&gt; 18] &lt;- “supreme”</p><p>batch2$distance_cate[batch2[6]&lt;&#x3D; 25] &lt;- “Close”<br>batch2$distance_cate[batch2[6]&gt; 25 &amp; batch2[6]&lt;&#x3D;50 ] &lt;- “Mid”<br>batch2$distance_cate[batch2[6]&gt; 50 &amp; batch2[6]&lt;&#x3D;75 ] &lt;- “Far”<br>batch2$distance_cate[batch2[6]&gt; 75] &lt;- “Very far”</p><p>使用R内置的boxplot函数绘制箱型图。<br>y变量<del>x变量，即工资</del>工作年限组别。<br>内置函数无法调整x变量各水平的顺序<br>boxplot(salary ~ experience_cate, data &#x3D; batch2, xlab &#x3D; “工作年限”, ylab &#x3D; “工资”)</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Tech-study</tag>
+      
+      <tag>Statistics</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>游戏观察 Gaming Observation</title>
+    <link href="/2022/10/10/GamingObserve/"/>
+    <url>/2022/10/10/GamingObserve/</url>
+    
+    <content type="html"><![CDATA[<p>Digital Gaming Observation</p><p>Where immersiveness comes from?</p><p>How interface creates immersiveness?</p><p>How digits and data becomes the fabric and units of creation?</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Tech-study</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Digital Hamster</title>
+    <link href="/2022/10/10/Digital-Hamster/"/>
+    <url>/2022/10/10/Digital-Hamster/</url>
+    
+    <content type="html"><![CDATA[<p>数据仓鼠：大量囤积数字内容相信未来终有一天会使用……</p><span id="more"></span><h2 id="经验帖"><a href="#经验帖" class="headerlink" title="经验帖"></a>经验帖</h2><p><a href="https://blog.csdn.net/YYIverson?type=blog">CSDN博主1</a><br>数据分析学习经验</p><h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p><a href="https://datajournalism.com/discuss">datajournalism</a><br><a href="https://create.piktochart.com/output/38783444-blockchain-where-s-the-way-out-after-the-boom">PICTOCHART</a>a tool to generate slide-like visuals<br><a href="https://www.cnopendata.com/data/m/recent/recruitment.html">CnOpenData</a><br><a href="https://blog.csdn.net/qq_36744449/article/details/124460466">政府开放数据</a><br><a href="https://www.it610.com/article/1404129359492599808.htm">可视化图表的blog文章</a></p><h3 id="Index-中文数据新闻作品"><a href="#Index-中文数据新闻作品" class="headerlink" title="Index-中文数据新闻作品"></a>Index-中文数据新闻作品</h3><p><a href="https://www.imokey.cn/sicnu/index.html">中国地铁五十年</a> 丰富的数据来源，主要采用charts，数据可视化不统一，叙事弱<br><a href="https://mp.weixin.qq.com/s/BUo6WZs3u44gy9bvPoRAYQ">零糖食品与控糖</a> 数据以文本为主，豆瓣小组+京东评论，词频研究<br><a href="">数据火锅公众号搜索关键词案例</a><br>mooc<br><a href="https://www.icourse163.org/course/JHC-1205898819?from=searchPage&outVendor=zw_mooc_pcssjg_">游戏可视化编程</a><br>data journalism playbook<br>story telling with data<br>写作脑科学<br>story board</p><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><a href="https://www.wyzowl.com/">Animation-making platform(with digital marketing data)</a></p><h2 id="Analytics"><a href="#Analytics" class="headerlink" title="Analytics"></a>Analytics</h2>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Tech-study</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Greeting Thao from Tsinghua GBJ</title>
     <link href="/2022/10/09/QA-GBJ/"/>
     <url>/2022/10/09/QA-GBJ/</url>
@@ -27,7 +118,7 @@
     <link href="/2022/10/07/hello-world/"/>
     <url>/2022/10/07/hello-world/</url>
     
-    <content type="html"><![CDATA[<p>Hey friend!<br>This blog is created to pin the updates of my study&#x2F;work in journalism, reading, photographing, meeting with people etc.</p><span id="more"></span><p>To clarify the name of this page, STEP-HOP is a dance step consisting of a forward step followed by a hop on the same foot. In <a href="https://www.youtube.com/watch?v=no3BbjUp4Dg">Quickstep</a> of ballroom dancing, this step is used to turn around and move towards a new direction. This word gives a sense of stepping to the next stage of path, and this is exactly my expectation for career, life and the world.</p><p>Let’s <strong>step hop</strong>! Continue reading to know about meeeee!</p><h3 id="Study-journalism-amp-communication-in-PKU-then-THU"><a href="#Study-journalism-amp-communication-in-PKU-then-THU" class="headerlink" title="Study journalism &amp; communication in PKU then THU"></a>Study journalism &amp; communication in PKU then THU</h3><p>I’m studying for my double-degree master’s program of Journalism and Data Science at Tsinghua University. I graduated from Peking University with a bachelor’s degree in advertising in 2022, where I joined PKU Youth, a school media community, and worked as the chief editor for a year. At PKU Youth I interviewed people, operated the WeChat account, conducted investigations and wrote features. Experiences as a student journalist was so amazing! I felt invigorated when listening to stories, taking them down and waiting for the story to get released. It’s also motivating to think of using media literacy to inlfuence people’s perception and behavior and change a little bit of the world.</p><h3 id="Excited-with-data-but-still-a-beginner"><a href="#Excited-with-data-but-still-a-beginner" class="headerlink" title="Excited with data but still a beginner"></a>Excited with data but still a beginner</h3><p>During the past summer holiday of 2022, I found great pleasure in exploring information visualization designs from branding advertising cases to data essays. Crafting stories with a combination of media forms and cutting-edge technology becomes my emphasis for graduate school learning. </p><h3 id="Puzzle-games-amp-ballroom-dancing-in-leisure"><a href="#Puzzle-games-amp-ballroom-dancing-in-leisure" class="headerlink" title="Puzzle games &amp; ballroom dancing in leisure"></a>Puzzle games &amp; ballroom dancing in leisure</h3><p>I watche drama series in her leisure time. Sherlock Holmes and Fleabag are my favorite! This year I has been hooked on real-time role-playing games and conducted a little study based on observations and experiences. Besides these I spent most of my time in ballroom dancing, which I started learning two years ago. This is me in a standard dancing.</p>]]></content>
+    <content type="html"><![CDATA[<p>Hey friend! </p><p>This blog is created to pin the updates of my study&#x2F;work in journalism, reading, photographing, meeting with people etc.</p><span id="more"></span><p>To clarify the name of this page, STEP-HOP is a dance step consisting of a forward step followed by a hop on the same foot. In <a href="https://www.youtube.com/watch?v=no3BbjUp4Dg">Quickstep</a> of ballroom dancing, this step is used to turn around and move towards a new direction. This word gives a sense of stepping to the next stage of path, and this is exactly my expectation for career, life and the world.</p><p>Let’s <strong>step hop</strong>! Continue reading to know about meeeee!</p><h3 id="Study-journalism-amp-communication-in-PKU-then-THU"><a href="#Study-journalism-amp-communication-in-PKU-then-THU" class="headerlink" title="Study journalism &amp; communication in PKU then THU"></a>Study journalism &amp; communication in PKU then THU</h3><p>I’m studying for my double-degree master’s program of Journalism and Data Science at Tsinghua University. I graduated from Peking University with a bachelor’s degree in advertising in 2022, where I joined PKU Youth, a school media community, and worked as the chief editor for a year. At PKU Youth I interviewed people, operated the WeChat account, conducted investigations and wrote features. </p><p>Experiences as a student journalist was so amazing! I felt invigorated when listening to stories, taking them down and waiting for the story to get released. It’s also motivating to think of using media literacy to inlfuence people’s perception and behavior and change a little bit of the world.</p><h3 id="Excited-with-data-but-still-a-beginner"><a href="#Excited-with-data-but-still-a-beginner" class="headerlink" title="Excited with data but still a beginner"></a>Excited with data but still a beginner</h3><p>During the past summer holiday of 2022, I found great pleasure in exploring information visualization designs from branding advertising cases to data essays. Crafting stories with a combination of media forms and cutting-edge technology becomes my emphasis for graduate school learning. </p><h3 id="Puzzle-games-amp-ballroom-dancing-in-leisure"><a href="#Puzzle-games-amp-ballroom-dancing-in-leisure" class="headerlink" title="Puzzle games &amp; ballroom dancing in leisure"></a>Puzzle games &amp; ballroom dancing in leisure</h3><p>I watche drama series in her leisure time. Sherlock Holmes and Fleabag are my favorite! This year I has been hooked on real-time role-playing games and conducted a little study based on observations and experiences. Besides these I spent most of my time in ballroom dancing, which I started learning two years ago. This is me in a standard dancing.</p>]]></content>
     
     
     

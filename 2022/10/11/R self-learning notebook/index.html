@@ -13,27 +13,28 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#AAABD3">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="Leyi Sun">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Hey friend!  This blog is created to pin the updates of my study&#x2F;work in journalism, reading, photographing, meeting with people etc.">
+    <meta name="description" content="描述多维数据，探索相关性123attach(evdata)par(mex&#x3D;0.5)pairs(evdata,gap&#x3D;0,cex.labels&#x3D;0.8)  对于数值型变量采用 1cor(abc)  多元线性回归有限采用最小二乘估计： maxLike包的maxLike函数最大似然估计 模型检验与评价：显著性检验t值：不是每个都显著，是否剔除变量F值：联合检验是否显著，是否更该模型anova函数得到">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Welcome to Helen&#39;s journal!">
-<meta property="og:url" content="http://example.com/2022/10/07/hello-world/index.html">
+<meta property="og:title" content="R-learning notebook">
+<meta property="og:url" content="http://example.com/2022/10/11/R%20self-learning%20notebook/index.html">
 <meta property="og:site_name" content="Journal STEPHOP">
-<meta property="og:description" content="Hey friend!  This blog is created to pin the updates of my study&#x2F;work in journalism, reading, photographing, meeting with people etc.">
+<meta property="og:description" content="描述多维数据，探索相关性123attach(evdata)par(mex&#x3D;0.5)pairs(evdata,gap&#x3D;0,cex.labels&#x3D;0.8)  对于数值型变量采用 1cor(abc)  多元线性回归有限采用最小二乘估计： maxLike包的maxLike函数最大似然估计 模型检验与评价：显著性检验t值：不是每个都显著，是否剔除变量F值：联合检验是否显著，是否更该模型anova函数得到">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-10-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-10-12T01:57:10.765Z">
+<meta property="article:published_time" content="2022-10-11T02:47:17.000Z">
+<meta property="article:modified_time" content="2022-10-11T04:50:06.798Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="About me">
+<meta property="article:tag" content="Tech-study">
+<meta property="article:tag" content="Statistics">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Welcome to Helen&#39;s journal! - Journal STEPHOP</title>
+  <title>R-learning notebook - Journal STEPHOP</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -108,7 +109,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 70vh;">
+<div class="header-inner" style="height: 110vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -207,13 +208,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/bg/de.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/R.jpeg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Welcome to Helen&#39;s journal!"></span>
+            <span id="subtitle" data-typed-text="R-learning notebook"></span>
           
         </div>
 
@@ -223,14 +224,14 @@
     
       <span class="post-meta mr-2">
         <i class="iconfont icon-author" aria-hidden="true"></i>
-        John Doe
+        Leyi Sun
       </span>
     
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-10-07 00:00" pubdate>
-          2022年10月7日 凌晨
+        <time datetime="2022-10-11 10:47" pubdate>
+          2022年10月11日 上午
         </time>
       </span>
     
@@ -241,7 +242,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.7k 字
+          1.3k 字
         
       </span>
     
@@ -252,7 +253,7 @@
         
         
         
-          6 分钟
+          5 分钟
         
       </span>
     
@@ -265,6 +266,10 @@
         
       </div>
 
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
       
     </div>
   </div>
@@ -300,12 +305,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Welcome to Helen&#39;s journal!</h1>
+            <h1 style="display: none">R-learning notebook</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2022年10月12日 上午
+                    本文最后更新于：2022年10月11日 下午
                   
                 
               </p>
@@ -313,15 +318,23 @@
             
               <div class="markdown-body">
                 
-                <p>Hey friend! </p>
-<p>This blog is created to pin the updates of my study&#x2F;work in journalism, reading, photographing, meeting with people etc.</p>
-<span id="more"></span>
-<p>To clarify the name of this page, STEP-HOP is a dance step consisting of a forward step followed by a hop on the same foot. In <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=no3BbjUp4Dg">Quickstep</a> of ballroom dancing, this step is used to turn around and move towards a new direction. This word gives a sense of stepping to the next stage of path, and this is exactly my expectation for career, life and the world.</p>
-<p>Let’s <strong>step hop</strong>! Continue reading to know about meeeee!</p>
-<h3 id="Study-journalism-amp-communication-in-PKU-then-THU"><a href="#Study-journalism-amp-communication-in-PKU-then-THU" class="headerlink" title="Study journalism &amp; communication in PKU then THU"></a>Study journalism &amp; communication in PKU then THU</h3><p>I’m studying for my double-degree master’s program of Journalism and Data Science at Tsinghua University. I graduated from Peking University with a bachelor’s degree in advertising in 2022, where I joined PKU Youth, a school media community, and worked as the chief editor for a year. At PKU Youth I interviewed people, operated the WeChat account, conducted investigations and wrote features. </p>
-<p>Experiences as a student journalist was so amazing! I felt invigorated when listening to stories, taking them down and waiting for the story to get released. It’s also motivating to think of using media literacy to inlfuence people’s perception and behavior and change a little bit of the world.</p>
-<h3 id="Excited-with-data-but-still-a-beginner"><a href="#Excited-with-data-but-still-a-beginner" class="headerlink" title="Excited with data but still a beginner"></a>Excited with data but still a beginner</h3><p>During the past summer holiday of 2022, I found great pleasure in exploring information visualization designs from branding advertising cases to data essays. Crafting stories with a combination of media forms and cutting-edge technology becomes my emphasis for graduate school learning. </p>
-<h3 id="Puzzle-games-amp-ballroom-dancing-in-leisure"><a href="#Puzzle-games-amp-ballroom-dancing-in-leisure" class="headerlink" title="Puzzle games &amp; ballroom dancing in leisure"></a>Puzzle games &amp; ballroom dancing in leisure</h3><p>I watche drama series in her leisure time. Sherlock Holmes and Fleabag are my favorite! This year I has been hooked on real-time role-playing games and conducted a little study based on observations and experiences. Besides these I spent most of my time in ballroom dancing, which I started learning two years ago. This is me in a standard dancing.</p>
+                <span id="more"></span>
+
+<h3 id="描述多维数据，探索相关性"><a href="#描述多维数据，探索相关性" class="headerlink" title="描述多维数据，探索相关性"></a>描述多维数据，探索相关性</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">attach</span><span class="hljs-params">(evdata)</span></span><br><span class="hljs-function"><span class="hljs-title">par</span><span class="hljs-params">(mex=<span class="hljs-number">0.5</span>)</span></span><br><span class="hljs-function"><span class="hljs-title">pairs</span><span class="hljs-params">(evdata,gap=<span class="hljs-number">0</span>,cex.labels=<span class="hljs-number">0.8</span>)</span></span><br></code></pre></td></tr></table></figure>
+
+<p>对于数值型变量采用</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">cor</span><span class="hljs-params">(abc)</span></span><br></code></pre></td></tr></table></figure>
+
+<h3 id="多元线性回归"><a href="#多元线性回归" class="headerlink" title="多元线性回归"></a>多元线性回归</h3><p>有限采用最小二乘估计：</p>
+<p>maxLike包的maxLike函数最大似然估计</p>
+<p>模型检验与评价：显著性检验<br>t值：不是每个都显著，是否剔除变量<br>F值：联合检验是否显著，是否更该模型<br>anova函数得到方差表：从上向下进行，逐个剔除模型</p>
+<p>R语言对大规模数据进行描述性分析与绘图<br>探索流程.batch2为原数据.sample1为小样本</p>
+<p>Step1：读取数据到数据集<br>batch2 &lt;- read.csv(“&#x2F;home&#x2F;mw&#x2F;input&#x2F;data5003&#x2F;batch2_jobID_00B80TR.csv”)</p>
+<p>原数据集中取前十行作为小样本，试运行debug语法<br>观察小样本，确定数据集包含变量的类型与统计口径<br>sample1 &lt;- batch2[c(1:10),]<br>sample1 </p>
+<p>对原数据集各变量的分布进行观察。输出每个变量的四分位数。<br>summary(batch2)</p>
+<p>根据summary的四分位数情况，对工作年限和距离城市的公里数两个定距变量进行简单分组。<br>分组后可以采用定类X定距的箱型图观察各组的分布情况<br>由于变量数较少采用batch2[第几列]引用条件<br>[]方括号内写筛选条件，赋值需要用双引号括起标签<br>batch2$experience_cate[batch2[7]&lt;&#x3D; 6] &lt;- “short”<br>batch2$experience_cate[batch2[7]&gt; 6 &amp; batch2[6]&lt;&#x3D;12 ] &lt;- “mid”<br>batch2$experience_cate[batch2[7]&gt; 12 &amp; batch2[6]&lt;&#x3D;18 ] &lt;- “long”<br>batch2$experience_cate[batch2[7]&gt; 18] &lt;- “supreme”</p>
+<p>batch2$distance_cate[batch2[6]&lt;&#x3D; 25] &lt;- “Close”<br>batch2$distance_cate[batch2[6]&gt; 25 &amp; batch2[6]&lt;&#x3D;50 ] &lt;- “Mid”<br>batch2$distance_cate[batch2[6]&gt; 50 &amp; batch2[6]&lt;&#x3D;75 ] &lt;- “Far”<br>batch2$distance_cate[batch2[6]&gt; 75] &lt;- “Very far”</p>
+<p>使用R内置的boxplot函数绘制箱型图。<br>y变量<del>x变量，即工资</del>工作年限组别。<br>内置函数无法调整x变量各水平的顺序<br>boxplot(salary ~ experience_cate, data &#x3D; batch2, xlab &#x3D; “工作年限”, ylab &#x3D; “工资”)</p>
 
                 
               </div>
@@ -334,7 +347,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/About-me/">#About me</a>
+        <a href="/tags/Tech-study/">#Tech-study</a>
+      
+        <a href="/tags/Statistics/">#Statistics</a>
       
     </div>
   
@@ -346,26 +361,26 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Welcome to Helen&#39;s journal!</div>
-      <div>http://example.com/2022/10/07/hello-world/</div>
+      <div>R-learning notebook</div>
+      <div>http://example.com/2022/10/11/R self-learning notebook/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>John Doe</div>
+          <div>Leyi Sun</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年10月7日</div>
+          <div>2022年10月11日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2022年10月12日</div>
+          <div>2022年10月11日</div>
         </div>
       
       
@@ -396,15 +411,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/10/09/QA-GBJ/" title="Greeting Thao from Tsinghua GBJ">
+                      <a href="/2022/10/14/bloombergindex/" title="bloomberg index">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Greeting Thao from Tsinghua GBJ</span>
+                        <span class="hidden-mobile">bloomberg index</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2022/10/10/GamingObserve/" title="游戏观察 Gaming Observation">
+                        <span class="hidden-mobile">游戏观察 Gaming Observation</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
